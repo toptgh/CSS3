@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#box{width: 400px;height: 500px;border: 1px solid;margin: 50px auto;position: relative;}
+		.head{width: 300px;height: 280px;background: #0cafda;border: 2px solid black; border-radius:48% 48%;margin: 10px auto;position: relative;box-shadow:-3px 8px 3px 2px #9f9f9f,3px 1px 5px 2px #c5c5c5 inset; }
+		.face{width: 260px;height: 195px;border: 2px solid;background: #fff;border-radius: 49% 49%;position: absolute;top: 70px;left: 18px;z-index: 2;}
+		.hz{width:60px;height: 2px;background: #333333;transform: rotate(20deg);position: absolute;left: 30px;top: 70px;z-index: 5;}
+		.hz2{width:60px;height: 2px;background: #333333;transform: rotate(0deg);position: absolute;left: 30px;top: 90px;z-index: 5;}
+		.hz3{width:60px;height: 2px;background: #333333;transform: rotate(-20deg);position: absolute;left: 30px;top: 110px;z-index: 5;}
+		.hza{width:60px;height: 2px;background: #333333;transform: rotate(160deg);position: absolute;left: 168px;top: 70px;z-index: 5;}
+		.hzb{width:60px;height: 2px;background: #333333;transform: rotate(0deg);position: absolute;left: 168px;top: 90px;z-index: 5;}
+		.hzc{width:60px;height: 2px;background: #333333;transform: rotate(-160deg);position: absolute;left: 168px;top: 110px;z-index: 5;}
+		.eyes{width: 75px;height: 90px;border: 2px solid;background: #fff;border-radius: 43% 43%;position: absolute;top: 38px;left: 70px;z-index: 3;}
+		.eyes2{width: 75px;height: 90px;border: 2px solid;background: #fff;border-radius: 43% 43%;position: absolute;top: 38px;left: 148px;z-index: 3;}
+		.yq{width: 20px;height: 20px;background: #000;border-radius: 50% 50%;position: absolute;top: 30px;left: 5px;}
+		.yq2{width: 20px;height: 20px;background: #000;border-radius: 50% 50%;position: absolute;top: 30px;left:5px;}
+		#box:hover .head{transform:rotate(360deg) translate(55%,-40%) scale(0.6) skew(180deg);transition:all 3s ease-in-out;}
+		.bizi{width: 40px;height: 40px;background:#cc4b12;border-radius: 50% 50%;border: 2px solid;position: absolute;left: 107px;top: 47px;z-index: 2;}
+		.dd{width: 2px;height: 2px;background: #fff;box-shadow: 2px 2px 2px 5px #fff;border-radius: 50% 50%;position: absolute;left: 25px;top: 12px;}
+		.shu{width: 3px;height:60px;background: black;position: absolute;left: 127px;top: 90px;z-index: 2;}
+		.zui{width:170px;height: 70px; background: #fff;border-bottom: 3px solid #000;border-radius: 50% 50%;position: absolute;left: 40px;top: 80px;}
+		.wb{width:200px;height: 22px; ;border: 2px solid black;background: #992a00;border-radius: 10px;position: absolute;left: 98px;top: 268px;z-index: 2;}
+		.hj{width: 50px;height: 50px;border: 2px solid;border-radius: 50% 50%;background: #f2a32a;position: absolute;left: 175px;top: 275px;box-shadow: -1px 1px 5px 5px #fae093;z-index: 2;box-shadow:-2px 1px 1px 2px #9f9f9f;}
+		#box:hover .hj{transform:translate(0%,-250%) scale(4);transition:4s 1s;background: #0cafda;}
+		#box:hover .hj .hjzui{transition:4s 2s;background: #0cafda;}
+		#box:hover .hj .hjmm{transition:4s 3s;background: #0cafda;}
+		#box:hover .hj .hjmm2{transition:4s 3s;background: #0cafda;}
+		.hjmm{width:15px;height: 20px; background: #f2a32a;border-top: 3px solid #000;border-radius: 50% 50%;position: absolute;left: -3px;top: 5px;}
+		.hjmm2{width:15px;height: 20px; background: #f2a32a;border-top: 3px solid #000;border-radius: 50% 50%;position: absolute;left: 38px;top: 5px;}
+		.hjeyes{width: 20px;height: 5px;border: 2px solid;background: #fff;border-radius:50% 50%;position: absolute;top: 15px;left: -3px;z-index: 3;}
+		.hjeyes2{width: 20px;height: 5px;border: 2px solid;background: #fff;border-radius:50% 50%;position: absolute;top: 15px;left: 28px;z-index: 3;}
+		
+		.hjyq{width: 6px;height: 6px;background: #000;border-radius: 50% 50%;position: absolute;top: 0px;left: 2px;}
+		.hjyq2{width: 6px;height: 6px;background: #000;border-radius: 50% 50%;position: absolute;top:0px;left: 2px;}
+		.hjzui{width:40px;height: 30px; background: #f2a32a;border-bottom: 3px solid #000;border-radius: 50% 50%;position: absolute;left: 5px;top: 12px;}
+		.st{width: 190px;height:160px;border: 2px solid;background:#0cafda;position: absolute;left: 104px;top: 290px;z-index: 1; }
+		.dkd{width: 150px;height: 150px;background: #fff;border: 2px solid;border-radius: 50% 50%;position: absolute;left: 18px;top: -20px;z-index: -1;}
+		.xkd{width: 120px;height: 60px;background: #fff;border: 2px solid;border-radius:0 0 60px 60px;position: absolute;left: 13px;top: 70px;}
+		.banyuan{width: 25px;height: 20px;border-top: 2px solid;border-radius: 20px 20px 0 0;position: absolute;left: 188px;top: 433px;z-index: 1;background: #fff;}
+		.zs{width:80px;height: 50px;border: 2px solid;position: absolute;background:#0cafda;transform: rotate(-30deg);left: 40px;top: 310px;box-shadow:-2px 1px 1px 2px #9f9f9f;}
+		.zd{width: 45px;height: 20px;background: #0cafda;transform: rotate(-90deg);position: absolute;left: 91px;top: 306px;z-index:9;}
+		.sz{width: 60px;height: 60px;border: 2px solid;border-radius: 50% 50%;background: #fff;position: absolute;left: -30px;top: -10px;box-shadow:-2px 1px 1px 2px #9f9f9f; }
+		.ys{width:90px;height: 50px;border: 2px solid;position: absolute;background:#0cafda;transform: rotate(150deg);left: 278px;top: 280px;}
+		.zd2{width: 45px;height: 20px;background: #0cafda;transform: rotate(-90deg);position: absolute;left: 280px;top: 306px;z-index:9;}
+		.sz2{width: 60px;height: 60px;border: 2px solid;border-radius: 50% 50%;background: #fff;position: absolute;left: -30px;top: -6px;}
+		.jiao{width:120px;height: 35px;background: #fff;border: 2px solid;border-radius:45px 35px 35px 20px; position: absolute;top: 451px;left: 75px;z-index: 3;box-shadow:-3px 3px 3px 2px #9f9f9f,3px 1px 5px 2px #c5c5c5 inset; }
+		.jiao2{width:120px;height: 35px;background: #fff;border: 2px solid;border-radius:35px 45px 20px 35px; position: absolute;top: 451px;left: 205px;z-index: 3;box-shadow:-3px 3px 3px 2px #9f9f9f,3px 5px 5px 2px #c5c5c5 inset; }
+		.kh{font-size: 40px;position: absolute;top: 10px;right: 0px;text-shadow:3px 4px 5px red,-4px -2px 3px yellow;}
+		.shuzhi{width: 3px;height:300px;background: black;position: absolute;left: 365px;top: 60px;z-index: -1;box-shadow:-3px 3px 3px 2px #0cafda,3px 3px 3px 2px red;}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div class="head">
+			<div class="face">
+			<div class="hz"></div>
+			<div class="hz2"></div>
+			<div class="hz3"></div>
+			<div class="hza"></div>
+			<div class="hzb"></div>
+			<div class="hzc"></div>
+				<div class="bizi">
+					<div class="dd"></div>
+				</div>
+				<div class="shu"></div>
+				<div class="zui"></div>
+			</div>
+			<div class="eyes">
+				<div class="yq"></div>
+			</div>
+			<div class="eyes2">
+				<div class="yq2"></div>
+			</div>
+			
+		</div>
+		<div class="wb"></div>
+		<div class="hj">
+			<div class="hjmm"></div>
+			<div class="hjmm2"></div>
+			<div class="hjeyes">
+				<div class="hjyq"></div>
+			</div>
+			<div class="hjeyes2">
+				<div class="hjyq2"></div>
+			</div>
+			<div class="hjzui"></div>
+
+		</div>
+		<div class="st">
+			<div class="dkd">
+				<div class="xkd"></div>
+			</div>
+		</div>
+		<div class="banyuan"></div>
+		<div class="zs">
+			<div class="sz"></div>
+		</div>
+		<div class="zd"></div>
+
+		<div class="ys">
+			<div class="sz2"></div>
+		</div>
+		<div class="zd2"></div>
+		<div class="jiao"></div>
+		<div class="jiao2"></div>
+		<div class="kh">快乐</div>
+		<div class="shuzhi"></div>
+	</div>
+</body>
+</html>

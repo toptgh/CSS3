@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		.box{
+			width:600px;
+			height:400px;
+			margin:100px auto;
+			border-bottom: 1px solid #666;
+			position: relative;
+		}
+		.box div{
+			width:40px;
+			height:150px;
+			background: red;
+			position: absolute;
+			left:280px;
+			bottom: 20px;
+			transform-origin: center bottom;
+			transition:2s;
+			opacity: 0.5;
+			
+
+		}
+		.box:hover div:first-child{
+			transform:rotate(90deg);
+		}
+		.box:hover div:nth-child(2){
+			transform:rotate(75deg);
+			background: orange;
+		}
+		.box:hover div:nth-child(3){
+			transform:rotate(60deg);
+			background: pink;
+		}
+		.box:hover div:nth-child(4){
+			transform:rotate(45deg);
+			background: green;
+		}
+		.box:hover div:nth-child(5){
+			transform:rotate(30deg);
+			background: blue;
+		}
+		.box:hover div:nth-child(6){
+			transform:rotate(15deg);
+			background: purple;
+		}
+		.box:hover div:nth-child(7){
+			transform:rotate(0deg);
+			background: yellow;
+		}
+		.box:hover div:nth-child(8){
+			transform:rotate(-15deg);
+			background: orange;
+		}
+		.box:hover div:nth-child(9){
+			transform:rotate(-30deg);
+			background: pink;
+		}
+		.box:hover div:nth-child(10){
+			transform:rotate(-45deg);
+			background: green;
+		}
+		.box:hover div:nth-child(11){
+			transform:rotate(-60deg);
+			background: blue;
+		}
+		.box:hover div:nth-child(12){
+			transform:rotate(-75deg);
+			background: purple;
+		}
+		.box:hover div:nth-child(13){
+			transform:rotate(-90deg);
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>6</div>
+		<div>5</div>
+		<div>4</div>
+		<div>3</div>
+		<div>2</div>
+		<div>1</div>
+	</div>
+</body>
+</html>

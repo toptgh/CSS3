@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+
+		section{width: 500px;height: 500px;margin: 50px auto;border: 2px solid red;border-radius:50%;
+			position: relative;
+			transform-style:preserve-3d;
+			animation:change 3s linear 1s infinite;
+
+		}
+		article{width: 500px;height: 500px;margin: 20px auto;border: 2px solid black;border-radius:50%;
+			position: relative;
+			transform-style:preserve-3d;
+			transform:rotateX(-90deg) rotateY(-90deg);
+			
+			
+		}
+		div{
+			width: 200px; height: 200px;background: #55ccbf;
+			position: absolute;
+			top: 150px;
+			left: 150px;
+			font-size: 50px;
+			line-height: 200px;
+			text-align: center;
+			opacity: 0.7;
+			
+			}
+		
+
+		@keyframes change{
+
+				0%{
+					transform: rotateX(0deg) rotateY(0deg);
+				}
+				
+				100%{
+					transform: rotateX(360deg) rotateY(360deg);
+				}
+			}
+
+
+		div:nth-child(1){
+			background: red;
+			transform:translate3d(0,0,100px);
+
+		}
+		div:nth-child(2){
+			background: yellow;
+			transform:translate3d(0,0,-100px) rotateY(180deg);
+		}
+
+		div:nth-child(3){
+			background: green;
+			transform:translate3d(-100px,0,0) rotateY(-90deg);
+
+		}
+
+		div:nth-child(4){
+			background: pink;
+			transform:translate3d(100px,0,0) rotateY(90deg);
+		}
+
+		div:nth-child(5){
+			background:orange;
+			transform:translate3d(0,-100px,0) rotateX(90deg);
+		}
+
+		div:nth-child(6){
+			background:purple;
+			transform:translate3d(0,100px,0) rotateX(-90deg);
+		}
+
+	</style>
+</head>
+<body>
+	<section>
+			<article>
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>
+				<div>4</div>
+				<div>5</div>
+				<div>6</div>
+			</article>
+	</section>
+</body>
+</html>
